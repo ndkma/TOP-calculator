@@ -1,3 +1,27 @@
+.button::-moz-selection {
+    background: transparent;
+  }
+  
+.button::selection {
+    background: transparent;
+  }
+
+.operator::-moz-selection {
+    background: transparent;
+  }
+  
+.operator::selection {
+    background: transparent;
+  }
+
+.period::-moz-selection {
+    background: transparent;
+  }
+  
+.period::selection {
+    background: transparent;
+  }
+
 .main-container {
     max-width: 350px;
     margin: 10vh auto 0 auto;
@@ -26,6 +50,17 @@
 }
 
 .button {
+    font-size: 40px;
+    text-align: center;
+    border: 4px dotted rgb(150, 144, 144);
+    border-radius: 50px;
+    margin: 5px;
+    transition: 50ms;
+    cursor: pointer;
+    background-color: rgba(243, 212, 75, 0.911);
+}
+
+.period {
     font-size: 40px;
     text-align: center;
     border: 4px dotted rgb(150, 144, 144);

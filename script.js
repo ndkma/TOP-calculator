@@ -9,6 +9,15 @@ numBtn.forEach(function(pressedButton){
     });
 });
 
+const periodBtn = document.querySelector(".period");
+periodBtn.addEventListener('click', () => {
+    if ((calcDisplay.textContent.length < 10) && (calcDisplay.textContent.includes('.') == false) &&
+    (calcDisplay.textContent != "")) {
+        
+        return calcDisplay.textContent = calcDisplay.textContent + periodBtn.innerText;
+    }
+});
+
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener('click', () => {
     return calcDisplay.textContent = "";
