@@ -1,4 +1,4 @@
-let calcDisplay = document.querySelector(".display");
+let calcDisplay = document.querySelector(".display-current");
 
 const numBtn = document.querySelectorAll(".button");
 numBtn.forEach(function(pressedButton){
@@ -28,3 +28,8 @@ backBtn.addEventListener('click', () => {
     return calcDisplay.textContent = calcDisplay.textContent.slice(0, (calcDisplay.textContent.length-1));
 
 });
+
+//------------------------------LETS TRY----------------------------------//
+
+
+

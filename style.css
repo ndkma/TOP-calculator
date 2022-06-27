@@ -29,7 +29,7 @@
     border:2px solid black;
 }
 
-.display {
+.display-current {
     width: auto;
     min-height: 58px;
     text-align: right;
@@ -38,6 +38,16 @@
     padding-right: 3px;
     background-color: rgb(112, 159, 230);
     
+}
+
+.display-previous {
+    width: auto;
+    min-height: 58px;
+    text-align: right;
+    font-size: 50px;
+    border: 2px solid black;
+    padding-right: 3px;
+    background-color: rgb(112, 159, 230);
 }
 
 .buttons {
