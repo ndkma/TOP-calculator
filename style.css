@@ -31,21 +31,37 @@
 
 .display-current {
     width: auto;
-    min-height: 58px;
+    height: 52px;
     text-align: right;
     font-size: 50px;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     padding-right: 3px;
     background-color: rgb(112, 159, 230);
     
 }
 
+.display-operator {
+    width: auto;
+    height: 52px;
+    text-align: right;
+    font-size: 50px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding-right: 3px;
+    background-color: rgb(112, 159, 230);
+}
+
 .display-previous {
     width: auto;
-    min-height: 58px;
+    height: 40px;
     text-align: right;
     font-size: 30px;
-    border: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 3px dotted black;
     padding-right: 3px;
     background-color: rgb(112, 159, 230);
 }

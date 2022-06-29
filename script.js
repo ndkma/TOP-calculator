@@ -1,8 +1,10 @@
 let calcDisplayCurrent = document.querySelector(".display-current");
 let calcDisplayPrevious = document.querySelector(".display-previous");
+let calcDisplayOperator = document.querySelector(".display-operator");
 
 let numTop = "empty";
 let numBot = "";
+
 
 
 
@@ -40,30 +42,45 @@ equalsBtn.addEventListener('click', () => {
         numTop = Number(numTop) + Number(numBot);
         calcDisplayPrevious.textContent = numTop;
         calcDisplayCurrent.textContent = "";
+        numBot = "";
+        calcDisplayOperator.textContent = "";
+        operator = "";
     }
 
     if (operator == "-") {
         numTop = Number(numTop) - Number(numBot);
         calcDisplayPrevious.textContent = numTop;
         calcDisplayCurrent.textContent = "";
+        numBot = "";
+        calcDisplayOperator.textContent = "";
+        operator = "";
     }
     
     if (operator == "*") {
         numTop = Number(numTop) * Number(numBot);
         calcDisplayPrevious.textContent = numTop;
         calcDisplayCurrent.textContent = "";
+        numBot = "";
+        calcDisplayOperator.textContent = "";
+        operator = "";
     }
 
     if (operator == "/") {
         numTop = Number(numTop) / Number(numBot);
         calcDisplayPrevious.textContent = numTop;
         calcDisplayCurrent.textContent = "";
+        numBot = "";
+        calcDisplayOperator.textContent = "";
+        operator = "";
+       
     }
 });
 
 const subtractBtn = document.querySelector(".subtract");
 subtractBtn.addEventListener('click', () => {
-    operator = "-"
+    operator = "-";
+    calcDisplayOperator.innerText = operator;
+    console.log("operator " + operator);
     if (numTop == "empty") {
         numTop = numBot;
         calcDisplayPrevious.textContent = numTop;
@@ -71,13 +88,15 @@ subtractBtn.addEventListener('click', () => {
         numBot = "";
         calcDisplayCurrent.textContent = "";
         console.log("numBot = " + numBot);
-    }
+    } 
 
 });
 
 const addBtn = document.querySelector(".add");
 addBtn.addEventListener('click', () => {
-    operator = "+"
+    operator = "+";
+    calcDisplayOperator.innerText = operator;
+    console.log("operator " + operator);
     if (numTop == "empty") {
         numTop = numBot;
         calcDisplayPrevious.textContent = numTop;
@@ -85,13 +104,15 @@ addBtn.addEventListener('click', () => {
         numBot = "";
         calcDisplayCurrent.textContent = "";
         console.log("numBot = " + numBot);
-    }
+    } 
 
 });
 
 const divideBtn = document.querySelector(".divide");
 divideBtn.addEventListener('click', () => {
-    operator = "/"
+    operator = "/";
+    calcDisplayOperator.innerText = operator;
+    console.log("operator " + operator);
     if (numTop == "empty") {
         numTop = numBot;
         calcDisplayPrevious.textContent = numTop;
@@ -99,13 +120,15 @@ divideBtn.addEventListener('click', () => {
         numBot = "";
         calcDisplayCurrent.textContent = "";
         console.log("numBot = " + numBot);
-    }
+    } 
 
 });
 
 const multiplyBtn = document.querySelector(".multiply");
 multiplyBtn.addEventListener('click', () => {
-    operator = "*"
+    operator = "*";
+    calcDisplayOperator.innerText = operator;
+    console.log("operator " + operator);
     if (numTop == "empty") {
         numTop = numBot;
         calcDisplayPrevious.textContent = numTop;
@@ -113,7 +136,7 @@ multiplyBtn.addEventListener('click', () => {
         numBot = "";
         calcDisplayCurrent.textContent = "";
         console.log("numBot = " + numBot);
-    }
+    } 
 
 });
 
@@ -125,5 +148,6 @@ clearBtn.addEventListener('click', () => {
      operator = "";
      calcDisplayCurrent.textContent = "";
      calcDisplayPrevious.textContent = "";
+     calcDisplayOperator.textContent = "";
  });
 
